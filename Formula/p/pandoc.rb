@@ -1,8 +1,8 @@
 class Pandoc < Formula
   desc "Swiss-army knife of markup format conversion"
   homepage "https://pandoc.org/"
-  url "https://github.com/jgm/pandoc/archive/refs/tags/3.3.tar.gz"
-  sha256 "7025e32e9cce7cbde9f43afedbf34f16b37fd71b96626752fd18425ae67baef7"
+  url "https://github.com/jgm/pandoc/archive/refs/tags/3.4.tar.gz"
+  sha256 "7885c3aa2426142fb6b9d0157c2bf8484a6d560e62aac29bce51bf0b581ba259"
   license "GPL-2.0-or-later"
   head "https://github.com/jgm/pandoc.git", branch: "main"
 
