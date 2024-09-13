@@ -1,8 +1,8 @@
 class X265 < Formula
   desc "H.265/HEVC encoder"
   homepage "https://bitbucket.org/multicoreware/x265_git"
-  url "https://bitbucket.org/multicoreware/x265_git/get/3.6.tar.gz"
-  sha256 "206329b9599c78d06969a1b7b7bb939f7c99a459ab283b2e93f76854bd34ca7b"
+  url "https://bitbucket.org/multicoreware/x265_git/get/4.0.tar.gz"
+  sha256 "66b64be4b316362fdadb33ad8273a74236042cc380691bdbec42946b0437a389"
   license "GPL-2.0-only"
   head "https://bitbucket.org/multicoreware/x265_git.git", branch: "master"
 
