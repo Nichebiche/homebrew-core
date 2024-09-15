@@ -30,6 +30,13 @@ class Mmix < Formula
   depends_on "cweb" => :build
 
   def install
+    # Workaround for newer Clang
+    ENV.append_to_cflags "-Wno-implicit-int" if DevelopmentTools.clang_build_version >= 1403
+
+    # Work around failure from GCC 10+ using default of `-fno-common`
+    # multiple definition of `buffer'; /tmp/cckAoTjp.o:(.bss+0x20): first defined here
+    ENV.append_to_cflags "-fcommon" if OS.linux?
+
     ENV.deparallelize
     system "make", "all"
     bin.install "mmix", "mmixal", "mmmix", "mmotype"
