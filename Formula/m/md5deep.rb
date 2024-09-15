@@ -38,6 +38,13 @@ class Md5deep < Formula
     end
   end
 
+  # Fix literal and identifier spacing as dictated by C++11
+  # upstream pr ref, https://github.com/jessek/hashdeep/pull/385
+  patch do
+    url "https://github.com/jessek/hashdeep/commit/18a6b5d57f7a648d2b7dcc6e50ff00a1e4b05fcc.patch?full_index=1"
+    sha256 "a48a214b06372042e4e9fc06caae9d0e31da378892d28c4a30b4800cedf85e86"
+  end
+
   def install
     system "sh", "bootstrap.sh"
     system "./configure", "--prefix=#{prefix}"
